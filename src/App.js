@@ -98,6 +98,7 @@ function App() {
                 </div>
                 <div className="search-games">
                     <p>검색</p>
+                    <p>테스트</p>
                 </div>
                 <div className="dol-lim-pan">
                     <p> 뭐할지 모르겠으면 돌려돌려 돌림판!</p>
