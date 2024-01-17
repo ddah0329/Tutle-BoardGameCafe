@@ -1,7 +1,85 @@
+/*turtle_co/src/App.css*/
+
 .App {
   text-align: center;
+  height: 3000px;
 }
 
+/* header : 네비게이션*/
+.App-header {
+  background-color: #282c34;
+  padding: 3px;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: white;
+  font-size: 10px;
+}
+
+/* top-part : 임시카드 */
+.header-scroll-img {
+  transform-origin: center;
+  /*position: fixed;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*width: 100px;*/
+  /*height: 100px;*/
+  /*margin-left: -50px;*/
+  /*margin-top: -50px;*/
+}
+
+.how-many-are-you {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px; /* 적절한 여백 설정 */
+}
+
+.left-image {
+
+  width: 150px;
+}
+
+.mid-wheel-box {
+  background-color: grey; /* 적절한 배경색 설정 */
+  padding: 10px; /* 안쪽 여백 설정 */
+  border-radius: 8px; /* 둥근 테두리 설정 */
+  width: 200px; /* 박스의 너비에 맞게 조절 */
+}
+
+/*
+
+코딩애플
+.nav-bar {
+  display: flex;
+  background: grey;
+  width: 100%;
+  color: white;
+  padding-left: 20px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.list{
+  padding-left: 20px;
+  text-align: left;
+  border-bottom: 1px solid grey;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+}
+
+.modal {
+  margin-top: 20px;
+  padding: 20px;
+  background: aliceblue;
+  text-align: left;
+}
+
+-----기본----
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +114,4 @@
     transform: rotate(360deg);
   }
 }
+*/
