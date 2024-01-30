@@ -79,36 +79,38 @@ header {
   margin-right: 8px; /* 아이콘과 입력창 사이의 간격 설정 */
 }
 
-/*mid-part : 돌림판*/
+/* mid-part : 돌림판 */
 .dol-lim-pan {
+  height: 200px;
   position: relative;
-  margin: 20px;
-  width: 300px;
-  height: 300px;
-  background-image: url('./Images/circle.png'); /* circle.png 경로에 맞게 수정 */
-  background-size: cover;
+  justify-content: center;
 }
 
+.dollimpan-img,
+.dollimpan-text {
+  position: absolute;
+}
 
-/*.dol-lim-pan::before {*/
-/*  content: "";*/
+.dollimpan-img {
+  width: 250px; /* 적절한 크기로 조절 */
+  z-index: 1; /* z-index를 이용하여 다른 요소 위에 배치 */
+}
 
-/*  position: absolute;*/
+.dollimpan-text {
+  width: 250px; /* 적절한 크기로 조절 */
+  animation: rotateAnimation 10s linear infinite; /* 회전 애니메이션 적용 */
+  z-index: 2; /* z-index를 이용하여 다른 요소 위에 배치 */
+}
 
-/*  top: 50%;*/
-/*  left: 50%;*/
-/*  transform: translate(-50%, -50%);*/
-/*  border-radius: 50%;*/
-/*}*/
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-/*.dol-lim-pan p {*/
-/*  position: absolute;*/
-/*  top: 50%;*/
-/*  left: 50%;*/
-/*  transform: translate(-50%, -50%) rotate(45deg); !* 45도 각도로 회전 *!*/
-/*  color: black; !* 텍스트 색상 설정 *!*/
-/*  font-size: 16px; !* 적절한 폰트 크기 설정 *!*/
-/*}*/
 
 /*
 
