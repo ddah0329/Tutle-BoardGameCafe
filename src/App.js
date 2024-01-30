@@ -2,9 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import temporaryCard1 from './temporary_card.png';
-import temporaryCard2 from './temporary_card_2.png';
-import temporaryCard3 from './temporary_card_3.png';
+import temporaryCard1 from './Images/temporary_card.png';
+import temporaryCard2 from './Images/temporary_card_2.png';
+import temporaryCard3 from './Images/temporary_card_3.png';
+import aPlaceForTurtle from './Images/img_aPlaceForTurtles.png';
+import turtleBeam from './Images/img_TurtleBeam.png';
 
 function App() {
 
@@ -41,18 +43,19 @@ function App() {
     return (
         <div className="App">
 
-            {/*헤더*/}
-            <header className="App-header">
+{/*---헤더---------------------------------------------*/}
+            <header>
                 <h1>App-header</h1>
             </header>
-
+{/*---상단---------------------------------------------*/}
             <div className="top-part">
-                {/*스크롤 이벤트 : 안녕 거북이들 환영합니다*/}
+
+        {/*---스크롤 이벤트 : 안녕 거북이들 환영합니다----------*/}
                 <h1 style={{ transform: helloTransform }}>안녕,</h1>
                 <h1 style={{ transform: turtlesTransform }}>거북이들</h1>
                 <h1 style={{ transform: welcomeTransform }}>환영합니다</h1>
 
-                {/*스크롤 이벤트 : 임시카드*/}
+        {/*---스크롤 이벤트 : 임시카드 ---------------------*/}
                 <img
                     src={temporaryCard1}
                     alt="Temporary Card 1"
@@ -75,10 +78,13 @@ function App() {
                 />
             </div>
 
+{/*---중앙------------------------------------------*/}
             <div className="mid-part">
+
+        {/*---몇 명이서 왔어--------------------------*/}
                 <div className="how-many-are-you">
                     {/* 왼쪽 이미지 */}
-                     <img src="img_aPlaceForTurtles.png" alt="Turtles Place" className="left-image"/>
+                     <img src={aPlaceForTurtle} alt="Turtles Place" className="left-image"/>
 
                     {/* 오른쪽 텍스트 박스 */}
                     <div className="mid-wheel-box">
@@ -91,18 +97,36 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div className="what-do-you-like">
-                    <img src="img_TurtleBeam.png" alt="Turtles Beam" className="left-image"/>
 
-                    <p>혹시 어떤거 좋아해?</p>
+        {/*---어떤거 좋아해? (장르)--------------------*/}
+                <div className="what-do-you-like">
+                    <div className="mid-wheel-box">
+                        <p>혹시 어떤거 좋아해?</p>
+                        <div>
+                            <p>추리</p>
+                            <p>파티</p>
+                            <p>마피아</p>
+                            <p>덱 빌딩</p>
+                        </div>
+                    </div>
+                    <img src={turtleBeam} alt="Turtles Beam" className="left-image"/>
                 </div>
+
+                {/*---검색---------------------------------*/}
                 <div className="search-games">
                     <p>검색</p>
                     <p>테스트</p>
                 </div>
+
+        {/*---돌림판---------------------------------*/}
                 <div className="dol-lim-pan">
                     <p> 뭐할지 모르겠으면 돌려돌려 돌림판!</p>
                 </div>
+            </div>
+
+{/*---하단------------------------------------------*/}
+            <div className="bottom-part">
+                <p>밑부분</p>
             </div>
         </div>
     );

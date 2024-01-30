@@ -6,7 +6,7 @@
 }
 
 /* header : 네비게이션*/
-.App-header {
+header {
   background-color: #282c34;
   padding: 3px;
   margin-left: 100px;
@@ -34,8 +34,14 @@
   margin: 20px; /* 적절한 여백 설정 */
 }
 
-.left-image {
+.what-do-you-like {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px; /* 적절한 여백 설정 */
+}
 
+.left-image {
   width: 150px;
 }
 
