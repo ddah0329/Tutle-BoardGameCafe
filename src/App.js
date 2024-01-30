@@ -87,7 +87,7 @@ function App() {
                      <img src={aPlaceForTurtle} alt="Turtles Place" className="left-image"/>
 
                     {/* 오른쪽 텍스트 박스 */}
-                    <div className="mid-wheel-box">
+                    <div className="mid-slide-box">
                         <p>혹시 몇 명이서 왔어?</p>
                         <div>
                             <p>1명</p>
@@ -100,7 +100,7 @@ function App() {
 
         {/*---어떤거 좋아해? (장르)--------------------*/}
                 <div className="what-do-you-like">
-                    <div className="mid-wheel-box">
+                    <div className="mid-slide-box">
                         <p>혹시 어떤거 좋아해?</p>
                         <div>
                             <p>추리</p>
@@ -112,21 +112,30 @@ function App() {
                     <img src={turtleBeam} alt="Turtles Beam" className="left-image"/>
                 </div>
 
-                {/*---검색---------------------------------*/}
+        {/*---검색---------------------------------*/}
                 <div className="search-games">
-                    <p>검색</p>
-                    <p>테스트</p>
+                    <input
+                        type="text"
+                        placeholder="거북이에 이 게임이 있을까?"
+                        className="search-input"
+                    />
+                    <span className="search-icon">&#128269;</span>
                 </div>
 
-        {/*---돌림판---------------------------------*/}
+                {/*---돌림판---------------------------------*/}
                 <div className="dol-lim-pan">
                     <p> 뭐할지 모르겠으면 돌려돌려 돌림판!</p>
                 </div>
+
             </div>
 
-{/*---하단------------------------------------------*/}
+            {/*---하단------------------------------------------*/}
             <div className="bottom-part">
-                <p>밑부분</p>
+                <p>거북이에서는 지금...🐢</p>
+                <div className="bottom-three-cards">
+
+                </div>
+
             </div>
         </div>
     );
