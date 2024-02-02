@@ -41,7 +41,7 @@ function App() {
 
     const card1Style = {transform: card1Transform, left: '40%', top: '40%'};
     const card2Style = {transform: card2Transform, right: '10%', top: '50%'};
-    const card3Style = {transform: card3Transform, left: '20%', bottom: '10%'};
+    const card3Style = {transform: card3Transform, left: '20%', bottom: '30%'};
 
     return (
         <div className="App">
@@ -119,7 +119,7 @@ function App() {
                 <div className="search-games">
                     <input
                         type="text"
-                        placeholder="거북이에 이 게임이 있을까?"
+                        placeholder="이 게임이 있을까?"
                         className="search-input"
                     />
                     <span className="search-icon">&#128269;</span>
@@ -146,3 +146,4 @@ function App() {
 }
 
 export default App;
+
