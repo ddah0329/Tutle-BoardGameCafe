@@ -1,4 +1,4 @@
-/*turtle_co/src/App.css*/
+/* turtle_co/src/App.css */
 
 .App {
   text-align: center;
@@ -25,15 +25,8 @@ header {
   transform-origin: center;
 }
 
-
 /*------mid-part-----------------*/
-.how-many-are-you {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px;
-}
-
+.how-many-are-you,
 .what-do-you-like {
   display: flex;
   align-items: center;
@@ -81,10 +74,9 @@ header {
   display: inline-block; /* 아이콘이 입력창 안에 있도록 */
 }
 
-
-
 /* 화면이 작아질 때 아이콘을 표시하도록 설정 */
-@media (max-width: 500px) { /*500px 미만이 되면*/
+@media (max-width: 500px) {
+  /*500px 미만이 되면*/
   .search-games {
     margin-left: 20px;
     margin-right: 20px;
@@ -94,9 +86,8 @@ header {
   }
 }
 
-
-
-@media (max-width: 270px) {/*270px 미만이 되면*/
+@media (max-width: 270px) {
+  /*270px 미만이 되면*/
   .search-games {
     margin-left: 5px;
     margin-right: 5px;
@@ -105,8 +96,6 @@ header {
     display: inline-block;
   }
 }
-
-
 
 /* mid-part : 돌림판 */
 .dol-lim-pan {
