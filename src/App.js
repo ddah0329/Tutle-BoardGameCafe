@@ -12,7 +12,9 @@ import dollimpanImg from './Images/dollimpan_img.png';
 import dollimpanText from './Images/dollimpan_text.png';
 
 function App() {
-    // -------마우스 클릭 커서 이벤트-----------------------
+
+
+// -------마우스 클릭 커서 이벤트-----------------------
     const [isMouseClick, setIsMouseClick] = useState(false);
 
     const handleMouseClick = () => {
@@ -20,7 +22,7 @@ function App() {
 
         setTimeout(() => {
             setIsMouseClick(false);
-        }, 1000);
+        }, 100);
     };
 
     useEffect(() => {
@@ -31,7 +33,7 @@ function App() {
         };
     }, []);
 
-    // -------스크롤 이벤트-----------------------
+// -------스크롤 이벤트-----------------------
     // 스크롤 이벤트 기본 설정
     const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -47,15 +49,15 @@ function App() {
         };
     }, []);
 
-    //스크롤 이벤트 : 안녕 거북이들 환영합니다
-    const helloTransform = `translate(-${scrollPosition}px, -${scrollPosition}px)`;
-    const turtlesTransform = `translate(${scrollPosition}px, -${scrollPosition}px)`;
-    const welcomeTransform = `translate(${scrollPosition}px, ${scrollPosition}px)`;
+    // //스크롤 이벤트 : 안녕 거북이들 환영합니다
+    // const helloTransform = `translate(-${scrollPosition}px, -${scrollPosition}px)`;
+    // const turtlesTransform = `translate(${scrollPosition}px, -${scrollPosition}px)`;
+    // const welcomeTransform = `translate(${scrollPosition}px, ${scrollPosition}px)`;
 
     //스크롤 이벤트 : 임시카드
     const card1Transform = `translate(-${scrollPosition * 0.2}px, -${scrollPosition * 0.5}px)`;
     const card2Transform = `translate(${scrollPosition * 0.2}px, -${scrollPosition * 0.5}px)`;
-    const card3Transform = `translate(${scrollPosition * 0.2}px, ${scrollPosition * 0.5}px)`;
+    const card3Transform = `translate(${scrollPosition * 0.2}px, ${scrollPosition * 0.1}px)`;
 
     const card1Style = {
         transform: card1Transform,
@@ -83,10 +85,13 @@ function App() {
             </header>
             {/*---상단---------------------------------------------*/}
             <div className="top-part">
-                {/*---스크롤 이벤트 : 안녕 거북이들 환영합니다----------*/}
-                <h1 style={{ transform: helloTransform }}>안녕,</h1>
-                <h1 style={{ transform: turtlesTransform }}>거북이들</h1>
-                <h1 style={{ transform: welcomeTransform }}>환영합니다</h1>
+
+                <div className="welcome-text">
+                    <h1>안녕</h1>
+                    <h1>거북이들,</h1>
+                    <h1>🔥어서와🔥</h1>
+                </div>
+
                 {/*---스크롤 이벤트 : 임시카드 ---------------------*/}
                 <img src={temporaryCard1} alt="Greetings - Temporary Card 1" className="header-scroll-img" style={card1Style} />
                 <img src={temporaryCard2} alt="Greetings - Temporary Card 2" className="header-scroll-img" style={card2Style} />
@@ -98,23 +103,26 @@ function App() {
                 {/*---몇 명이서 왔어--------------------------*/}
                 <div className="how-many-are-you">
                     {/* 왼쪽 이미지 */}
-                    <img src={aPlaceForTurtle} alt="A Place for Turtles" className="left-image" />
+                    <img src={turtleBeam} alt="Genre - Turtles Beam" className="turtleBeam"/>
+
                     {/* 오른쪽 텍스트 박스 */}
                     <div className="mid-slide-box">
-                        <p>혹시 몇 명이서 왔어?</p>
+                        <h3>몇 명이서 왔어?</h3>
                         <div>
                             <p>1명</p>
                             <p>2명</p>
                             <p>3명</p>
                             <p>4명</p>
+                            <p>5명</p>
+                            <p>6명</p>
                         </div>
                     </div>
                 </div>
 
                 {/*---어떤거 좋아해? (장르)--------------------*/}
-                <div className="what-do-you-like">
+                <div className="what-genre-do-you-like">
                     <div className="mid-slide-box">
-                        <p>혹시 어떤거 좋아해?</p>
+                        <h3>혹시 어떤거 좋아해?</h3>
                         <div>
                             <p>추리</p>
                             <p>파티</p>
@@ -122,7 +130,7 @@ function App() {
                             <p>덱 빌딩</p>
                         </div>
                     </div>
-                    <img src={turtleBeam} alt="Genre - Turtles Beam" className="left-image" />
+                    {/*<img src={turtleBeam} alt="Genre - Turtles Beam" className="left-image" />*/}
                 </div>
 
                 {/*---검색---------------------------------*/}
@@ -140,7 +148,7 @@ function App() {
 
             {/*---하단------------------------------------------*/}
             <div className="bottom-part">
-                <p>거북이에서는 지금...🐢</p>
+                <p>거북이에서는 지금,,🐢</p>
                 <div className="bottom-three-cards"></div>
             </div>
         </div>

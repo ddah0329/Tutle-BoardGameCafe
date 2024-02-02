@@ -1,9 +1,17 @@
 /* turtle_co/src/App.css */
 
+@font-face {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
   height: 3000px;
   cursor: url('./Images/main_cursor.png'), auto;
+  font-family: 'GangwonEduPowerExtraBoldA', sans-serif;
 }
 
 .App.is-clicked {
@@ -25,24 +33,56 @@ header {
   transform-origin: center;
 }
 
+.welcome-text h1 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 0.4;
+
+}
+
+.welcome-text {
+  margin: 200px;
+}
+
 /*------mid-part-----------------*/
 .how-many-are-you,
-.what-do-you-like {
+.what-genre-do-you-like {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 20px;
 }
 
-.left-image {
-  width: 150px;
+.turtleBeam {
+  margin-top: 100px;
+  width: 60%;
+  transform: scaleX(-1);
+  z-index: 1;
 }
 
 .mid-slide-box {
-  background-color: grey;
+  justify-content: left;
+  background-color: #07FF2F;
   padding: 10px;
   border-radius: 8px;
-  width: 200px; /* 박스의 너비에 맞게 조절 */
+  width: 300px; /* 박스의 너비에 맞게 조절 */
+  z-index: 2;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mid-slide-box p {
+  display: inline-block;
+  border: 1px solid white;
+  background: white;
+  padding: 7px;
+  width: fit-content;
+  border-radius: 15px; /* 모서리 둥글게 설정 */
+  margin: 5px;
+  justify-content: left;
+  font-size: 18px;
+
 }
 
 /* mid-part: 검색어 창 */
@@ -130,101 +170,7 @@ header {
   }
 }
 
-/*.dol-lim-pan {*/
-/*  top: 50%;*/
-/*  left: 50%;*/
-/*  height: 200px;*/
-/*  transform: translate(-50%, -50%);*/
-/*  width: 200px;*/
-/*}*/
-
-/*.dollimpan-img,*/
-/*.dollimpan-text {*/
-/*  position: absolute;*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*}*/
-
-/*.dollimpan-img {*/
-/*  bottom: 0;*/
-/*  z-index: 1;*/
-/*}*/
-
-/*.dollimpan-text {*/
-/*  animation: rotateAnimation 10s linear infinite;*/
-/*  z-index: 2;*/
-/*}*/
-
-
-
-
-
-/*
-
-코딩애플
-.nav-bar {
-  display: flex;
-  background: grey;
-  width: 100%;
-  color: white;
-  padding-left: 20px;
+/*히딘 bottompart*/
+.bottom-part p {
+  font-size: 30px;
 }
-
-div {
-  box-sizing: border-box;
-}
-
-.list{
-  padding-left: 20px;
-  text-align: left;
-  border-bottom: 1px solid grey;
-}
-
-button {
-  width: 100px;
-  height: 30px;
-}
-
-.modal {
-  margin-top: 20px;
-  padding: 20px;
-  background: aliceblue;
-  text-align: left;
-}
-
------기본----
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
