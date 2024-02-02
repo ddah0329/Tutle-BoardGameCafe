@@ -3,6 +3,11 @@
 .App {
   text-align: center;
   height: 3000px;
+  cursor: url('./Images/main_cursor.png'), auto;
+}
+
+.App.is-clicked {
+  cursor: url("./Images/click_cursor.png"), auto;
 }
 
 /* header : 네비게이션*/
@@ -19,6 +24,7 @@ header {
 .header-scroll-img {
   transform-origin: center;
 }
+
 
 /*------mid-part-----------------*/
 .how-many-are-you {
