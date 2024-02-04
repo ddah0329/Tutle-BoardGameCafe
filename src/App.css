@@ -7,8 +7,31 @@
   font-style: normal;
 }
 
+/* 화면이 작아질 때 아이콘을 표시하도록 설정 */
+@media (max-width: 500px) {
+  /*500px 미만이 되면*/
+  .search-games {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .search-icon {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 270px) {
+  /*270px 미만이 되면*/
+  .search-games {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .search-icon {
+    display: inline-block;
+  }
+}
+
+/*------------------------------------------------------*/
 .App {
-  text-align: center;
   height: 3000px;
   cursor: url('./Images/main_cursor.png'), auto;
   font-family: 'GangwonEduPowerExtraBoldA', sans-serif;
@@ -20,6 +43,7 @@
 
 /* header : 네비게이션*/
 header {
+  text-align: center;
   background-color: #282c34;
   padding: 3px;
   margin-left: 100px;
@@ -28,48 +52,45 @@ header {
   font-size: 10px;
 }
 
-/* top-part : 임시카드 */
-.header-scroll-img {
-  transform-origin: center;
-}
-
 .welcome-text h1 {
   font-weight: 900;
   font-size: 40px;
   line-height: 0.4;
-
 }
 
 .welcome-text {
-  margin: 200px;
+  margin-top: 200px;
+  text-align: center;
 }
 
-/*------mid-part-----------------*/
+/*------mid-top-part-----------------*/
+.mid-top-part {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 150px;
+}
+
 .how-many-are-you,
 .what-genre-do-you-like {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px;
 }
 
 .turtleBeam {
-  margin-top: 100px;
   width: 60%;
-  transform: scaleX(-1);
-  z-index: 1;
 }
 
 .mid-slide-box {
-  justify-content: left;
   background-color: #07FF2F;
   padding: 10px;
   border-radius: 8px;
-  width: 300px; /* 박스의 너비에 맞게 조절 */
-  z-index: 2;
+  height: 300px;
   font-size: 30px;
   display: flex;
   flex-direction: column;
+  align-items: start;
 }
 
 .mid-slide-box p {
@@ -80,10 +101,45 @@ header {
   width: fit-content;
   border-radius: 15px; /* 모서리 둥글게 설정 */
   margin: 5px;
-  justify-content: left;
   font-size: 18px;
-
 }
+
+.card-deck {
+  position: absolute;
+  right: 0;
+}
+
+.box {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center; /*글씨 세로 기준중앙 정렬*/
+  justify-content: center;  /*글씨 가로 기준중앙 정렬*/
+  border-radius: 15px;
+  color: black;
+  background-color: #07ff2f;
+  font-size: 20px;
+  padding-inline: 10px;
+  margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 호버 시 스타일 변경 */
+.box:hover.turtle {
+  background-color: #00FFFF !important;
+  color: black !important;
+}
+
+.box:hover.save {
+  background-color: #DBFF00 !important;
+  color: black !important;
+}
+
+.box:hover.world {
+  background-color: #7000FF !important;
+  color: white !important;
+}
+
 
 /* mid-part: 검색어 창 */
 .search-games {
@@ -114,46 +170,25 @@ header {
   display: inline-block; /* 아이콘이 입력창 안에 있도록 */
 }
 
-/* 화면이 작아질 때 아이콘을 표시하도록 설정 */
-@media (max-width: 500px) {
-  /*500px 미만이 되면*/
-  .search-games {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .search-icon {
-    display: inline-block;
-  }
-}
-
-@media (max-width: 270px) {
-  /*270px 미만이 되면*/
-  .search-games {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .search-icon {
-    display: inline-block;
-  }
-}
-
 /* mid-part : 돌림판 */
 .dol-lim-pan {
   width: auto;
-  height: 200px;
-  margin-top: 30px;
+  height: auto;
+  margin-top: 100px;
 }
 
 .dollimpan-img,
 .dollimpan-text {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  justify-content: center;
+  display: flex;
+
+  width: 400px;
+  height: 400px;
 }
 
 .dollimpan-img {
   z-index: 1;
+
 }
 
 .dollimpan-text {
@@ -170,7 +205,9 @@ header {
   }
 }
 
-/*히딘 bottompart*/
+/*히딘 bottom part*/
 .bottom-part p {
   font-size: 30px;
+  text-align: center;
+  margin-top: 600px;
 }

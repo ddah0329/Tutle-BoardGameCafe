@@ -6,10 +6,13 @@ import './App.css';
 import temporaryCard1 from './Images/temporary_card.png';
 import temporaryCard2 from './Images/temporary_card_2.png';
 import temporaryCard3 from './Images/temporary_card_3.png';
-import aPlaceForTurtle from './Images/img_aPlaceForTurtles.png';
 import turtleBeam from './Images/img_TurtleBeam.png';
 import dollimpanImg from './Images/dollimpan_img.png';
 import dollimpanText from './Images/dollimpan_text.png';
+import contactUs from './Images/contactUs.png';
+import instagramPNG from './Images/Instagram.png';
+import languageExchangeFront from './Images/languageExchangeFront.png';
+import languageExchangeBack from './Images/languageExchangeBack.png';
 
 function App() {
 
@@ -99,12 +102,11 @@ function App() {
             </div>
 
             {/*---중앙------------------------------------------*/}
-            <div className="mid-part">
+            <div className="mid-top-part">
                 {/*---몇 명이서 왔어--------------------------*/}
                 <div className="how-many-are-you">
                     {/* 왼쪽 이미지 */}
-                    <img src={turtleBeam} alt="Genre - Turtles Beam" className="turtleBeam"/>
-
+                        <img src={turtleBeam} alt="Genre - Turtles Beam" className="turtleBeam"/>
                     {/* 오른쪽 텍스트 박스 */}
                     <div className="mid-slide-box">
                         <h3>몇 명이서 왔어?</h3>
@@ -130,9 +132,17 @@ function App() {
                             <p>덱 빌딩</p>
                         </div>
                     </div>
-                    {/*<img src={turtleBeam} alt="Genre - Turtles Beam" className="left-image" />*/}
+                    <div className="card-deck">
+                        <div className="box turtle">거북이</div>
+                        <div className="box save">save</div>
+                        <div className="box world">the world</div>
+                    </div>
                 </div>
 
+            </div>
+
+
+            <div className="mid-bottom-part">
                 {/*---검색---------------------------------*/}
                 <div className="search-games">
                     <input type="text" placeholder="이 게임이 있을까?" className="search-input" />
@@ -149,7 +159,6 @@ function App() {
             {/*---하단------------------------------------------*/}
             <div className="bottom-part">
                 <p>거북이에서는 지금,,🐢</p>
-                <div className="bottom-three-cards"></div>
             </div>
         </div>
     );
