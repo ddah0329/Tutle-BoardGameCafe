@@ -1,6 +1,11 @@
 // turtle_co/src/App.js
 
 import React, { useEffect, useState } from 'react';
+import {Routes, Route, Link} from "react-router-dom";
+
+import Home from "./pages/Home";
+import GameSearch from "./pages/GameSearch";
+
 import './App.css';
 
 import temporaryCard1 from './Images/temporary_card.png';
@@ -9,7 +14,8 @@ import temporaryCard3 from './Images/temporary_card_3.png';
 import turtleBeam from './Images/img_TurtleBeam.png';
 import dollimpanImg from './Images/dollimpan_img.png';
 import dollimpanText from './Images/dollimpan_text.png';
-import contactUs from './Images/contactUs.png';
+import contactUsFront from './Images/contactUsFront.png';
+import contactUsBack from './Images/contactUsBack.png';
 import instagramPNG from './Images/Instagram.png';
 import languageExchangeFront from './Images/languageExchangeFront.png';
 import languageExchangeBack from './Images/languageExchangeBack.png';
@@ -80,11 +86,23 @@ function App() {
         bottom: '30%',
     };
 
+    // 이미지 호버시 이미지 변경
+    const [languageExchangeHovered, setLanguageExchangeHovered] = useState(false);
+    const [contactUsHovered, setContactUsHovered] = useState(false);
+
+
     return (
         <div className={`App ${isMouseClick ? 'is-clicked' : ''}`}>
             {/*---헤더---------------------------------------------*/}
             <header>
-                <h1>App-header</h1>
+                <nav>
+                    <Link to="/">Home</Link>
+                    <Link to="/GameSearch">GameSearch</Link>
+                </nav>
+                <Routes>
+                    <Route path ="/" element={<Home/>} />
+                    <Route path ="/GameSearch" element={<GameSearch/>} />
+                </Routes>
             </header>
             {/*---상단---------------------------------------------*/}
             <div className="top-part">
@@ -159,6 +177,23 @@ function App() {
             {/*---하단------------------------------------------*/}
             <div className="bottom-part">
                 <p>거북이에서는 지금,,🐢</p>
+                <div className="bottom-part-three-cards">
+                    <img
+                        src={languageExchangeHovered ? languageExchangeBack : languageExchangeFront}
+                        alt="LanguageExchangePoster"
+                        className="three-cards-IMG"
+                        onMouseEnter={() => setLanguageExchangeHovered(true)}
+                        onMouseLeave={() => setLanguageExchangeHovered(false)}
+                    />
+                    <img src={instagramPNG} alt="InstagramPoster" className="three-cards-IMG"/>
+                    <img
+                        src={contactUsHovered ? contactUsBack : contactUsFront}
+                        alt="ContactUsPoster"
+                        className="three-cards-IMG"
+                        onMouseEnter={() => setContactUsHovered(true)}
+                        onMouseLeave={() => setContactUsHovered(false)}
+                    />
+                </div>
             </div>
         </div>
     );

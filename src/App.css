@@ -181,14 +181,12 @@ header {
 .dollimpan-text {
   position: absolute;
   display: flex;
-
   width: 400px;
   height: 400px;
 }
 
 .dollimpan-img {
   z-index: 1;
-
 }
 
 .dollimpan-text {
@@ -211,3 +209,13 @@ header {
   text-align: center;
   margin-top: 600px;
 }
+
+.bottom-part-three-cards {
+  margin: 60px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+
+
