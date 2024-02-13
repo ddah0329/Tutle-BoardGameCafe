@@ -177,7 +177,7 @@ header {
   margin-top: 100px;
 }
 
-.dollimpan-img,
+.dollimpan-poster,
 .dollimpan-text {
   position: absolute;
   display: flex;
@@ -185,7 +185,7 @@ header {
   height: 400px;
 }
 
-.dollimpan-img {
+.dollimpan-poster {
   z-index: 1;
 }
 
@@ -217,5 +217,8 @@ header {
   flex-direction: row;
 }
 
+footer {
+  margin-top: 150px;
+}
 
 

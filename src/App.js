@@ -12,13 +12,14 @@ import temporaryCard1 from './Images/temporary_card.png';
 import temporaryCard2 from './Images/temporary_card_2.png';
 import temporaryCard3 from './Images/temporary_card_3.png';
 import turtleBeam from './Images/img_TurtleBeam.png';
-import dollimpanImg from './Images/dollimpan_img.png';
+import dollimpanPoster from './Images/dollimpan_img.png';
 import dollimpanText from './Images/dollimpan_text.png';
 import contactUsFront from './Images/contactUsFront.png';
 import contactUsBack from './Images/contactUsBack.png';
 import instagramPNG from './Images/Instagram.png';
 import languageExchangeFront from './Images/languageExchangeFront.png';
 import languageExchangeBack from './Images/languageExchangeBack.png';
+import footerSlide from './Images/footer.png';
 
 function App() {
 
@@ -89,7 +90,6 @@ function App() {
     // 이미지 호버시 이미지 변경
     const [languageExchangeHovered, setLanguageExchangeHovered] = useState(false);
     const [contactUsHovered, setContactUsHovered] = useState(false);
-
 
     return (
         <div className={`App ${isMouseClick ? 'is-clicked' : ''}`}>
@@ -169,12 +169,12 @@ function App() {
 
                 {/*---돌림판---------------------------------*/}
                 <div className="dol-lim-pan">
-                    <img src={dollimpanImg} alt="Dollimpan Image" className="dollimpan-img" />
+                    <img src={dollimpanPoster} alt="Dollimpan Poster" className="dollimpan-poster" />
                     <img src={dollimpanText} alt="Dollimpan Text" className="dollimpan-text" />
                 </div>
             </div>
 
-            {/*---하단------------------------------------------*/}
+{/*---하단------------------------------------------*/}
             <div className="bottom-part">
                 <p>거북이에서는 지금,,🐢</p>
                 <div className="bottom-part-three-cards">
@@ -195,6 +195,12 @@ function App() {
                     />
                 </div>
             </div>
+
+{/*---footer------------------------------------------*/}
+            <footer>
+                <img src={footerSlide} alt="footerSlide" className="footerSlide" />
+            </footer>
+
         </div>
     );
 }
