@@ -1,0 +1,47 @@
+:root {
+  --mainfont: "GangwonEduPower";
+
+  --black: #000000;
+  --black100: #111;
+  --black200: #222;
+  --black300: #000;
+  --black400: #000;
+  --black500: #000;
+
+  --blackAlpha100: rgba(17, 17, 17, 0.42);
+
+
+  --white: #fff;
+  --white100: #efefef;
+  --white200: #dadada;
+  --white300: #fff;
+  --white400: #fff;
+  --white500: #fff;
+
+  --whiteAlpha000: rgba(255, 255, 255, 0.35);
+
+
+  --red: #f00;
+
+  --pink: #FF41C7;
+
+  // 폰트 셋팅
+  font-family: var(--mainfont);
+  font-size: 16px;
+  line-height: 1.5;
+
+  // 폰트 최적화
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // 아이폰 가로모드에서 폰트 커짐 방지
+  -webkit-text-size-adjust: 100%;
+
+  // 휴대폰 사이즈 일때 폰트 조절
+  @media (max-width: 800px) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}

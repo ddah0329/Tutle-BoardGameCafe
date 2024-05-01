@@ -1,0 +1,42 @@
+.header__logo{
+
+  a{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+.header__menu {
+  padding: 10px 0;
+
+  .menu {
+
+    li {
+      margin-bottom: 5px;
+      display: inline-block;
+
+      a {
+        font-size: 1rem;
+        display: inline-block;
+        padding: 0.9rem 2rem 0.9rem 3.1250rem;
+        margin: 0 0.625rem;
+        border-radius: 40px;
+        position: relative;
+        line-height: 1;
+        color: var(--black);
+        transition: all 0.3s; //스무스하게 바뀌도록
+
+        &:hover {
+          color: var(--pink);
+
+        }
+      }
+
+      ////해당 페이지에 있으면 백그라운드 컬러 달라짐
+      //&.active a {
+      //  color: var(--pink);
+      //}
+    }
+  }
+}
