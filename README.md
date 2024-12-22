@@ -1,8 +1,9 @@
 ### GitHub 관리 규칙
 
 - Commit
-    - Commit 규칙을 통해 각 branch 별 commit 사항을 관리한다.
-        - 커밋은 기능 '완성' 단위로  수정만했다고 커밋하는게 아니라  **최소 함수나 클래스 구현한 단위로 커밋한다.**
+
+  - Commit 규칙을 통해 각 branch 별 commit 사항을 관리한다.
+    - 커밋은 기능 '완성' 단위로 수정만했다고 커밋하는게 아니라 **최소 함수나 클래스 구현한 단위로 커밋한다.**
 
     <br>
     
@@ -36,3 +37,4 @@
         
         `refactor (LoginService) : id, pw matching system change`
 
+test
